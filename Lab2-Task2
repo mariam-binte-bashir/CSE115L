@@ -1,0 +1,14 @@
+//Lab2-Task2(Input two double precision floating point numbers and output their sum and division)
+
+#include<stdio.h>
+int main()
+{
+double num1, num2;
+int result1,result2;
+scanf("%lf%lf", &num1, &num2);
+result1 = num1 + num2;
+result2 = num1 / num2;
+printf("%lf + %lf = %d\n", num1, num2, result1);
+printf("%lf / %lf = %d\n", num1, num2, result2);
+return 0;
+}
