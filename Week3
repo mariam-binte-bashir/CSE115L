@@ -1,0 +1,51 @@
+//switch case statements:
+#include<stdio.h>
+int main()
+{
+int choice;
+printf("Enter a number:");
+scanf("%d",&choice);
+switch(choice)
+{
+case 1:
+case 2:
+printf("You typed 1 or 2");
+break;
+case 3:
+case 4:
+printf("You typed 3 or 4");
+break;
+default:
+printf("You typed something else");
+}
+return 0;
+}
+
+
+
+//Nested switch case statement:
+
+#include <stdio.h>
+int main ()
+{
+int a,b;
+printf("Enter the value of a and b:");
+scanf("%d %d",&a, &b);
+switch(a)
+{
+case 1:
+printf("This is part of outer switch\n", a );
+switch(b)
+{
+case 2:
+printf("This is part of inner switch\n", a );
+break;
+default:
+printf("Inner switch default value\n");
+}
+break;
+default:
+printf("Default value\n");
+}
+return 0;
+}
