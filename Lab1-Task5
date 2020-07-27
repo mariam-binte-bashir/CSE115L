@@ -1,0 +1,13 @@
+//Task5(Input an integer, a floating point number and a character and output them)
+
+#include<stdio.h>
+
+int main()
+{
+int num1;
+float num2;
+char ch;
+scanf("%d%f%c", &num1, &num2, &ch);
+printf("%d\n%f\n%c\n", num1, num2,ch);
+return 0;
+}
