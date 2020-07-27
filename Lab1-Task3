@@ -1,0 +1,10 @@
+//Task3(Input a floting point number and output the same number)
+
+#include<stdio.h>
+int main()
+{
+float num;
+scanf("%f", &num);
+printf("%f", num);
+return 0;
+}
