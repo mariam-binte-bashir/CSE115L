@@ -1,0 +1,143 @@
+//Problem-1:Arithmetic Operator
+#include <stdio.h>
+
+int main()
+{
+    char operator;
+    double first, second;
+    printf("Enter an operator (+, -, *,): ");
+    scanf("%c", &operator);
+    printf("Enter first operand: ");
+    scanf("%lf", &first);
+    printf("Enter second operand: ");
+    scanf("%lf", &second);
+
+    switch (operator){
+
+    case '+':
+        printf("The result is: %.lf", first + second);
+        break;
+
+    case '-':
+        printf("The result is: %.lf", first - second);
+        break;
+
+    case '*':
+        printf("The result is: %.lf", first * second);
+        break;
+
+    case '/':
+        printf("The result is: %.lf", first / second);
+        break;
+
+    default:
+        printf("Error! operator is not correct");
+    }
+
+    return 0;
+
+
+}
+
+
+
+//Problem-2:Leap year
+#include <stdio.h>
+
+int main ()
+{
+     int year, remainder;
+     printf("Enter a year: ");
+     scanf("%d",&year);
+
+     remainder=((year%4==0)&&((year%400==0)||(year%100!=0)));
+
+     switch(remainder)
+     {
+     case 1:
+         printf("%d is a Leap year.", year );
+         break;
+
+     case 0:
+         printf("%d is not a Leap year.", year );
+         break;
+
+     default:
+         printf("Invalid.");
+         break;
+     }
+
+     return 0;
+
+}
+
+
+
+
+
+//Problem-3:Monthdays
+#include <stdio.h>
+
+int main()
+{
+int month;
+
+    printf("Enter month number (1-12): ");
+    scanf("%d", &month);
+
+    switch(month)
+    {
+        case 1:
+            printf("Number of days 31");
+            break;
+
+        case 2:
+            printf("Number of days = 28 or 29");
+            break;
+
+        case 3:
+            printf("Number of days = 31");
+            break;
+
+        case 4:
+            printf("Number of days = 30");
+            break;
+
+        case 5:
+            printf("Number of days = 31");
+            break;
+
+        case 6:
+            printf("Number of days = 30");
+            break;
+
+        case 7:
+            printf("Number of days = 31");
+            break;
+
+        case 8:
+            printf("Number of days = 30");
+            break;
+
+        case 9:
+            printf("Number of days = 31");
+            break;
+
+        case 10:
+            printf("Number of days = 30");
+            break;
+
+        case 11:
+            printf("Number of days = 31");
+            break;
+
+        case 12:
+            printf("Number of days = 30");
+            break;
+
+        default:
+        printf("Error! ");
+    }
+
+    return 0;
+}
