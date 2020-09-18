@@ -1,45 +1,27 @@
-  #include <stdio.h>
-    void main ()
-    {
+#include<stdio.h>
+#include<conio.h>
 
-        static int array[10][10];
-        int i, j, m, n, sum = 0;
+int string_ln(char*);
 
-        printf("Enter the order of the matrix\n");
-        scanf("%d %d", &m, &n);
+void main() {
+   char str[20];
+   int length;
+   clrscr();
 
-        printf("Enter the co-efficients of the matrix\n");
-        for (i = 0; i < m; ++i)
-        {
-            for (j = 0; j < n; ++j)
-            {
-                scanf("%d", &array[i][j]);
-            }
-        }
+   printf("\nEnter any string : ");
+   gets(str);
 
-        for (i = 0; i < m; ++i)
-        {
-            for (j = 0; j < n; ++j)
-            {
-                sum = sum + array[i][j] ;
-            }
+   length = string_ln(str);
+   printf("The length of the given string %s is : %d", str, length);
+   getch();
+}
 
-            printf("Sum of the %d row is = %d\n", i, sum);
-            sum = 0;
-
-        }
-        sum = 0;
-        for (j = 0; j < n; ++j)
-        {
-            for (i = 0; i < m; ++i)
-            {
-                sum = sum + array[i][j];
-            }
-
-            printf("Sum of the %d column is = %d\n", j, sum);
-            sum = 0;
-
-        }
-
-    }
-
+int string_ln(char*p) /* p=&str[0] */
+{
+   int count = 0;
+   while (*p != '\0') {
+      count++;
+      p++;
+   }
+   return count;
+}

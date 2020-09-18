@@ -1,11 +1,7 @@
-#include<stdio.h>
-void Display();
-int main()
+#include <stdio.h>
+int main ()
 {
-Display();
+int *ptr = NULL;
+printf("The value of ptr is: %x\n",ptr);
 return 0;
-}
-void Display()
-{
-printf("Hello Wolrd!\n");
 }

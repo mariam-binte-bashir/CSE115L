@@ -1,17 +1,30 @@
 #include <stdio.h>
-#include <math.h>
+#include <stdlib.h>
+int main() {
+    int num;
+    float *data;
+    printf("Enter the total number of elements: ");
+    scanf("%d", &num);
 
-int main()
-{
+    // Allocating memory for num elements
+    data = (float *)calloc(num, sizeof(float));
+    if (data == NULL) {
+        printf("Error!!! memory not allocated.");
+        exit(0);
+    }
 
-    float radius;
-    float surface_area, volume;
+    // Storing numbers entered by the user.
+    for (int i = 0; i < num; ++i) {
+        printf("Enter Number %d: ", i + 1);
+        scanf("%f", data + i);
+    }
 
-    printf("Enter radius of the sphere : \n");
-    scanf("%f", &radius);
-    surface_area =  4 * (22/7) * radius * radius;
-    volume = (4.0/3) * (22/7) * radius * radius * radius;
-    printf("Surface area of sphere is: %.3f", surface_area);
-    printf("\n Volume of sphere is : %.3f", volume);
+    // Finding the largest number
+    for (int i = 1; i < num; ++i) {
+        if (*data < *(data + i))
+            *data = *(data + i);
+    }
+    printf("Largest number = %.2f", *data);
+
     return 0;
 }

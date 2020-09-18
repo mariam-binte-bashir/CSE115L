@@ -1,14 +1,14 @@
-#include<stdio.h>
-void computeSum(int x, int y);
-int main()
+#include <stdio.h>
+int main ()
 {
-int var1, var2;
-scanf("%d %d", &var1, &var2);
-computeSum(var1, var2);
-return 0;
+char str[]="hello";
+char *chptr;
+chptr=str;
+int i=0;
+while(str[i]!='\0')
+{
+printf("%c",*chptr+i);
+i++;
 }
-void computeSum(int x, int y)
-{
-int result = x + y;
-printf("%d + %d = %d\n", x, y, result);
+return 0;
 }
